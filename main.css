@@ -1,0 +1,17 @@
+:root {
+  /* colores */
+  --rojo: hsl(322, 100%, 66%);
+  --azul: hsl(193, 100%, 96%);
+  --azul-oscuro: hsl(192, 100%, 9%)
+  --gris:hsl(208, 11%, 55%);
+
+  /* fuentes */
+  --font-size: 18px;
+  --body: 'Open Sans', sans-serif;
+  --headings: 'Poppins', sans-serif;
+  
+
+  /* medias */
+  --mobile: 375px;
+  --desktop: 1440px;
+} 
