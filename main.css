@@ -79,3 +79,37 @@ html.html {
   cursor: pointer;
 }
 
+/* section info */
+
+.main__info {
+  text-align: center;
+  margin: 70px 0; 
+  height: 100%;
+  padding: 0 70px;
+}
+
+.info-title, .info-pgrap, .info-button {
+  margin-bottom: 30px;
+}
+
+.info-title {
+  font-size: calc(var(--font-size) + 3px);
+}
+
+.info-pgraph {
+  font-size: calc(var(--font-size) - 2px);
+}
+
+.info-button {
+  margin-top: 30px;
+  padding: 10px 50px;
+  border-radius: 50px;
+  background-color: var(--rojo);
+  color: white;
+  border: none;
+}
+
+.info__img--img {
+  width: 100%;
+  margin-top: 10px;
+}
