@@ -155,6 +155,7 @@ html.html {
 
 .cards__card-button {
   padding-bottom: 10px;
+  font-size: calc(var(--font-size) - 8px);
 }
 
 
