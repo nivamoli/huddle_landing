@@ -1,0 +1,193 @@
+= ..lloogg
+
+(from ruby core)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBiiggMMaatthh
+------------------------------------------------------------------------
+  BigMath.log(decimal, numeric)    -> BigDecimal
+
+------------------------------------------------------------------------
+
+Computes the natural logarithm of decimal to the specified number of
+digits of precision, numeric.
+
+If decimal is zero or negative, raises Math::DomainError.
+
+If decimal is positive infinity, returns Infinity.
+
+If decimal is NaN, returns NaN.
+
+
+(from ruby core)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBuunnddlleerr::::MMoolliinniilllloo::::DDeeppeennddeennccyyGGrraapphh
+------------------------------------------------------------------------
+
+@return [Log] the op log for this graph
+
+
+(from ruby core)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCMMaatthh
+------------------------------------------------------------------------
+  log(z, b=::Math::E)
+
+------------------------------------------------------------------------
+
+Returns the natural logarithm of Complex. If a second argument is given,
+it will be the base of logarithm.
+
+  CMath.log(1 + 4i)     #=> (1.416606672028108+1.3258176636680326i)
+  CMath.log(1 + 4i, 10) #=> (0.6152244606891369+0.5757952953408879i)
+
+
+(from ruby core)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  CCMMaatthh
+------------------------------------------------------------------------
+  log(z, b=::Math::E)
+
+------------------------------------------------------------------------
+
+Returns the natural logarithm of Complex. If a second argument is given,
+it will be the base of logarithm.
+
+  CMath.log(1 + 4i)     #=> (1.416606672028108+1.3258176636680326i)
+  CMath.log(1 + 4i, 10) #=> (0.6152244606891369+0.5757952953408879i)
+
+
+(from ruby core)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  GGeemm::::RReessoollvveerr::::MMoolliinniilllloo::::DDeeppeennddeennccyyGGrraapphh
+------------------------------------------------------------------------
+
+@return [Log] the op log for this graph
+
+
+(from ruby core)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  LLooggggeerr
+------------------------------------------------------------------------
+  log(severity, message = nil, progname = nil)
+
+------------------------------------------------------------------------
+
+(This method is an alias for Logger#add.)
+
+=== AArrggss
+
+severity:
+  Severity.  Constants are defined in Logger namespace: DEBUG, INFO,
+  WARN, ERROR, FATAL, or UNKNOWN.
+
+message:
+  The log message.  A String or Exception.
+
+progname:
+  Program name string.  Can be omitted.  Treated as a message if no
+  message and block are given.
+
+block:
+  Can be omitted.  Called to get a message string if message is nil.
+
+
+=== RReettuurrnn
+
+When the given severity is not high enough (for this particular logger),
+log no message, and return true.
+
+=== DDeessccrriippttiioonn
+
+Log a message if the given severity is high enough.  This is the generic
+logging method.  Users will be more inclined to use #debug, #info,
+#warn, #error, and #fatal.
+
+MMeessssaaggee  ffoorrmmaatt: message can be any object,
+but it has to be converted to a String in order to log it.  Generally,
+inspect is used if the given object is not a String. A special case is
+an Exception object, which will be printed in detail, including message,
+class, and backtrace.  See #msg2str for the implementation if required.
+
+=== BBuuggss
+
+* Logfile is not locked.
+* Append open does not need to lock file.
+* If the OS supports multi I/O, records possibly may be mixed.
+
+
+(from ruby core)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  MMaatthh
+------------------------------------------------------------------------
+  log(*args)
+
+------------------------------------------------------------------------
+
+
+(from ruby core)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  SSyysslloogg
+------------------------------------------------------------------------
+  log(priority, format_string, *format_args)
+
+------------------------------------------------------------------------
+
+Log a message with the specified priority. Example:
+
+  Syslog.log(Syslog::LOG_CRIT, "Out of disk space")
+  Syslog.log(Syslog::LOG_CRIT, "User %s logged in", ENV['USER'])
+
+The priority levels, in descending order, are:
+
+LOG_EMERG:
+  System is unusable
+
+LOG_ALERT:
+  Action needs to be taken immediately
+
+LOG_CRIT:
+  A critical condition has occurred
+
+LOG_ERR:
+  An error occurred
+
+LOG_WARNING:
+  Warning of a possible problem
+
+LOG_NOTICE:
+  A normal but significant condition occurred
+
+LOG_INFO:
+  Informational message
+
+LOG_DEBUG:
+  Debugging information
+
+
+Each priority level also has a shortcut method that logs with it's named
+priority. As an example, the two following statements would produce the
+same result:
+
+  Syslog.log(Syslog::LOG_ALERT, "Out of memory")
+  Syslog.alert("Out of memory")
+
+Format strings are as for printf/sprintf, except that in addition %m is
+replaced with the error message string that would be returned by
+strerror(errno).
+
+
+(from ruby core)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  BBaassiiccLLoogg
+------------------------------------------------------------------------
+  log(level, data)
+
+------------------------------------------------------------------------
+
+Logs data at level if the given level is above the current log level.
+
+
+(from ruby core)
+=== IImmpplleemmeennttaattiioonn  ffrroomm  LLoogg
+------------------------------------------------------------------------
+  log(level, data)
+
+------------------------------------------------------------------------
+
+==== ((UUsseess  ssuuppeerrccllaassss  mmeetthhoodd  RRDDoocc::::AAnnyyMMeetthhoodd::  WWEEBBrriicckk::::BBaassiiccLLoogg##lloogg))
+------------------------------------------------------------------------
+
+Same as BasicLog#log
+
+
